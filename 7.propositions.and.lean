@@ -1,4 +1,4 @@
-def Implies (p q : Prop) : Prop := p → q
+def Implies (p q : Prop) : Prop := p → q -- the arrow is with \ + imp or to
 #check And     -- Prop → Prop → Prop
 #check Or      -- Prop → Prop → Prop
 #check Not     -- Prop → Prop
@@ -17,6 +17,18 @@ structure myAnd (a b : Prop) where
   left: a
   right: b
 
+/-
+Suppose you want to construct myAnd (1 = 1) (2 = 2):
+def ex : myAnd (1 = 1) (2 = 2) :=
+  myAnd.intro rfl rfl
+
+You can also use Lean’s “record update” style:
+
+def ex2 : myAnd (1 = 1) (2 = 2) :=
+  { left := rfl, right := rfl }
+
+
+-/
 
 #print myAnd
 

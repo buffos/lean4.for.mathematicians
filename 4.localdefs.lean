@@ -1,5 +1,4 @@
 -- Lean also allows you to introduce "local" definitions using the let keyword.
-
 #check let y := 2 + 2; y * y   -- Nat
 #eval  let y := 2 + 2; y * y   -- 16
 
@@ -31,9 +30,7 @@ def foo := let a := Nat; fun x : a => x + 2
 
 /-
 def bar := (fun a => fun x : a => x + 2) Nat
-
-dose not type check because x + 2 is not defined for every type
-
+does not type check because x + 2 is not defined for every type
 but if we add a type class constraint as follows it does
 def bar := (fun (a : Type) [Add a] => fun x : a => x + 2) Nat
  which says that bar should follow the Add interface

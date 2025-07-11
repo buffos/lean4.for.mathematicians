@@ -9,9 +9,7 @@ def doTwice (α : Type) (h : α → α) (x : α) : α :=
 def doThrice (α : Type) (h : α → α) (x : α) : α :=
   h (h (h x))
 -/
-
 -- we can say
-
 variable (α β γ : Type)
 variable (g : β → γ) (f : α → β) (h : α → α)
 variable (x : α)
@@ -25,9 +23,7 @@ def doThrice := h (h (h x))
 #print doThrice
 
 -- !!! variable stays in scope through the end of the file.
-
 -- if we want to contain we can use a section (no need for indentation , just for presentation)
-
 /-
 section useful
   variable (α β γ : Type)

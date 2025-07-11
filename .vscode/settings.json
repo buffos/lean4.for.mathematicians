@@ -4,6 +4,7 @@
         "elim",
         "injective",
         "repr",
-        "succ"
+        "succ",
+        "symm"
     ]
 }
